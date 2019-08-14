@@ -43,7 +43,7 @@
 			{
 				if($password == $password2)
 				{
-					$query = "INSERT INTO tbcustomer(firstname, customerId, customerPassword) VALUES('firstname','$userId',SHA1(UNHEX(SHA1('$password'))))";
+					$query = "INSERT INTO tbcustomer(firstname, customerId, customerPassword) VALUES('firstname','$userId','$password'";
 					$result = mysqli_query($connection, $query);
 					if (!$result) {
 						echo "<script>alert('Error');</script>";
